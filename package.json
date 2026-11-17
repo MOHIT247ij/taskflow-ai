@@ -1,0 +1,19 @@
+{
+  "name": "taskflow-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TaskFlow AI — AI-powered mini SaaS for project & task management (React + Node/Express + MongoDB)",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n API,WEB -c magenta,cyan \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "seed": "npm run seed --prefix server",
+    "test": "npm test --prefix server",
+    "build": "npm run build --prefix client",
+    "start": "npm start --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "author": "Mohit Hingase",
+  "license": "MIT"
+}
